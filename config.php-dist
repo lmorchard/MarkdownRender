@@ -1,0 +1,4 @@
+<?php
+$base_path = "/Users/lorchard/Sites";
+$base_url = "http://localhost/~lorchard/MarkdownRender";
+

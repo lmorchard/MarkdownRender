@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.+)\.md$ /~lorchard/MarkdownRender/render.php?q=$1.md
+</IfModule>
