@@ -2,8 +2,8 @@
 /**
  * Quick and dirty Markdown renderer
  */
-require('config.php');
-require('markdown.php');
+require('lib/config.php');
+require('lib/markdown.php');
 
 // Convert ?q into a file path
 $q = $_GET['q'] ? $_GET['q'] : 'index.md';
@@ -44,15 +44,16 @@ if (!is_file($file)) {
         <style>
             article, footer, header, hgroup, nav, section { display: block; }
         </style>
-        <link type="text/css" rel="stylesheet" href="<?=$base_url?>/render.css" />
-        <script src="<?=$base_url?>/html5.js" type="text/javascript"/></script>
-        <script src="<?=$base_url?>/render.js" type="text/javascript"/></script>
+        <link type="text/css" rel="stylesheet" href="<?=$base_url?>/css/render.css" />
+        <script src="<?=$base_url?>/js/jquery-1.3.2.min.js" type="text/javascript"/></script>
+        <script src="<?=$base_url?>/js/md5-min.js" type="text/javascript"/></script>
+        <script src="<?=$base_url?>/js/html5.js" type="text/javascript"/></script>
+        <script src="<?=$base_url?>/js/outliner.js" type="text/javascript"/></script>
+        <script src="<?=$base_url?>/js/render.js" type="text/javascript"/></script>
     </head>
     <body>
         <article>
-            <section>
-                <?=$text?>
-            </section>
+            <section><?=$text?></section>
         </article>
     </body>
 </html>

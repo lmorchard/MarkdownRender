@@ -5,9 +5,7 @@ body {
 }
 article {
     margin: 0 15%;
-}
-section {
-    padding: 1em;
+    padding: 0.25em 1.5em 0.25em 1.5em;
     color: #222;
     background-color: #f8f8f8;
 }
