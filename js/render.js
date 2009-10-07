@@ -46,7 +46,10 @@ var Render_Main = (function () {
                 var parent_id = h1.attr('id');
 
                 // Inject the table of contents list after the first header.
-                var toc = h1.after('<ul class="toc"></ul>').next();
+                var toc = h1.find('~ul.toc');
+                if (!toc.length) {
+                    toc = h1.after('<ul class="toc"></ul>').next();
+                }
 
                 // Recursively build the relevant table of contents for 
                 // this section.
