@@ -1,5 +1,5 @@
 body {
-    background-color: #aaa;
+    background-color: #111;
     color: #333;
     font-family: georgia 12px;
 }
@@ -8,6 +8,6 @@ article {
 }
 section {
     padding: 1em;
-    color: #000;
-    background-color: #fff;
+    color: #222;
+    background-color: #f8f8f8;
 }
