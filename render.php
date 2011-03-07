@@ -46,6 +46,12 @@ if (!is_file($file)) {
             article, footer, header, hgroup, nav, section { display: block; }
         </style>
         <link type="text/css" rel="stylesheet" href="<?=$base_url?>/css/render.css" />
+        <script type="text/javascript">
+            var disqus_shortname = '<?= htmlspecialchars($disqus_shortname) ?>';
+            <?php if ($disqus_developer): ?>
+                var disqus_developer = 1;
+            <?php endif ?>
+        </script>
         <!--[if IE]>
             <script src="<?=$base_url?>/js/html5.js" type="text/javascript"/></script>
         <![endif]-->
@@ -55,17 +61,19 @@ if (!is_file($file)) {
         <script src="<?=$base_url?>/js/render.js" type="text/javascript"/></script>
     </head>
     <body>
+        <header>
+            <h1><a rel="home" title="0xDECAFBAD" href="http://decafbad.com/">0xDECAFBAD</a></h1>
+            <span>It’s all spinning wheels and self-doubt until the first pot of coffee.</span>
+        </header>
+
         <article>
+
             <section><?=$text?></section>
+                
             <section class="comments">
+
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
-                    var disqus_shortname = '<?= htmlspecialchars($disqus_shortname) ?>';
-
-                    // var disqus_identifier = 'unique_dynamic_id_1234';
-                    // var disqus_url = 'http://example.com/permalink-to-page.html';
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
                     (function() {
                         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -74,6 +82,7 @@ if (!is_file($file)) {
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
             </section>
         </article>
     </body>

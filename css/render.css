@@ -1,32 +1,78 @@
 body {
-    background-color: #111;
-    color: #333;
-    font-family: georgia 12px;
+     background-color: #111111;
+     color: #333333;
 }
+
+header {
+     background-color: #111111;
+     color: #333333;
+     margin: 1em 25%;
+     padding: 0em;
+}
+
+header h1 {
+     float: left;
+     font-family: monospace;
+     margin: 0pt 0.5em 0pt 0pt;
+}
+
+header span {
+     color: #666666;
+     font: 11px/2em Days,tahoma;
+}
+
+header h1 a {
+     color: #DDDDDD;
+     text-decoration: none;
+}
+
 article {
-    margin: 0 25%;
-    padding: 0.25em 1.5em 0.25em 1.5em;
-    color: #222;
-    background-color: #f8f8f8;
+     background-color: #F8F8F8;
+     color: #222222;
+     margin: 0pt 25%;
+     padding: 0.25em 1.5em;
 }
+
 section ul.toc {
-    border: 1px dashed #ccc;
-    padding: 0.75em 1.75em;
+     border: 1px dashed #CCCCCC;
+     padding: 0.75em 1.75em;
 }
+
 section ul.toc li {
-    font-size: 0.9em;
-    margin: 0 0 0.5em 0;
+     font-size: 0.9em;
+     margin: 0pt 0pt 0.5em;
 }
+
 section h1 {
-    margin: 0.75em 0 0 0;
-    padding: 0 0 0 0;
-    border-bottom: 2px solid #333;
+     font-family: tahoma;
+     /* border-bottom: 2px solid #333333; */
+     margin: 0.75em 0pt 0pt;
+     padding: 0pt;
+     font-size: 1.25em;
 }
+
 section h2 {
-    margin: 1em 0 0 0;
-    padding: 0 0 0 0;
-    border-bottom: 1px solid #333;
+     font-family: tahoma;
+     /* border-bottom: 1px solid #333333; */
+     margin: 1em 0pt 0pt;
+     padding: 0pt;
+     font-size: 1.125em;
 }
+
+section h3 {
+     font-family: tahoma;
+     /* border-bottom: 1px solid #333333; */
+     margin: 1em 0pt 0pt;
+     padding: 0pt;
+     font-size: 1em;
+}
+
 section hr {
-    margin: 1.5em 0;
+     margin: 1.5em 0pt;
+}
+
+section.comments {
+    padding: 0.5em 0 0 0;
+    margin: 0.75em 0 0.5em 0;
+    border-top: 1px solid #999;
 }
