@@ -9,6 +9,7 @@ require('lib/markdown.php');
 $q = $_GET['q'] ? $_GET['q'] : 'index.md';
 $q = str_replace($base_path, '', $q);
 $file = $base_path . '/' . $q;
+$mtime = filemtime($file);
 
 // Try to prevent naughty files paths
 if (FALSE && realpath($file) !== $file) {
@@ -67,6 +68,7 @@ if (!is_file($file)) {
         </header>
 
         <article>
+            <time datetime="<?=date("c", $mtime)?>" pubdate><span><?=date("D, Y M d @ H:i O", $mtime)?></span></time>
 
             <section><?=$text?></section>
                 

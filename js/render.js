@@ -39,16 +39,16 @@ var Render_Main = (function () {
 
                 // Find the first header for the section, ensure it has an ID.
                 var section = $(root.element);
-                var h1 = section.find('>h1');
+                var h1 = section.find('>h2:first');
                 if (!h1.attr('id')) {
                     h1.attr('id', hex_md5(h1.text()));
                 }
                 var parent_id = h1.attr('id');
 
                 // Inject the table of contents list after the first header.
-                var toc = h1.find('~ul.toc');
+                var toc = h1.find('ul.toc');
                 if (!toc.length) {
-                    toc = h1.after('<ul class="toc"></ul>').next();
+                    toc = h1.before('<ul class="toc"></ul>').prev();
                 }
 
                 // Recursively build the relevant table of contents for 

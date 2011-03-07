@@ -31,6 +31,18 @@ article {
      color: #222222;
      margin: 0pt 25%;
      padding: 0.25em 1.5em;
+     position: relative;
+}
+
+article time {
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+}
+article time span {
+    font-family: tahoma;
+    font-size: 0.85em;
+    color: #999;
 }
 
 section ul.toc {
