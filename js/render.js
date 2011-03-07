@@ -94,6 +94,10 @@ var Render_Main = (function () {
 
             }(createOutline(document)[0]));
 
+            if (!$('ul.toc').children().length) { 
+                $('ul.toc').remove(); 
+            }
+
         },
 
         EOF: null // I hate trailing comma errors

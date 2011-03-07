@@ -39,15 +39,18 @@ if (!is_file($file)) {
 }
 ?>
 <html>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <head>
         <title><?=htmlspecialchars($title)?></title>
         <style>
             article, footer, header, hgroup, nav, section { display: block; }
         </style>
         <link type="text/css" rel="stylesheet" href="<?=$base_url?>/css/render.css" />
+        <!--[if IE]>
+            <script src="<?=$base_url?>/js/html5.js" type="text/javascript"/></script>
+        <![endif]-->
         <script src="<?=$base_url?>/js/jquery-1.3.2.min.js" type="text/javascript"/></script>
         <script src="<?=$base_url?>/js/md5-min.js" type="text/javascript"/></script>
-        <script src="<?=$base_url?>/js/html5.js" type="text/javascript"/></script>
         <script src="<?=$base_url?>/js/outliner.js" type="text/javascript"/></script>
         <script src="<?=$base_url?>/js/render.js" type="text/javascript"/></script>
     </head>
